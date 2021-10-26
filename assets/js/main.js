@@ -15,6 +15,7 @@ const $  = document.querySelector.bind(document)
     const repeatSong = $('.btn-repeat')
     const playlist = $('.playlist')
     const progressArea = $('.progress-area')
+    const volumeSlider = $('#volume_silder')
 
     const app = {
       currentIndex: 0,
@@ -237,10 +238,16 @@ const $  = document.querySelector.bind(document)
         }
 
         // xu ly repeat song
-        repeatSong.onclick = function (e) {
+        repeatSong.onclick = function () {
           _this.isRepeat = !_this.isRepeat
           repeatSong.classList.toggle('active',_this.isRepeat);
         }
+
+        // Xu ly tang giam volume
+        volumeSlider.onchange = function () {
+          audio.volume = volumeSlider.value / 100;
+        }
+        
 
         // xu ly nhan vao playlist
         playlist.onclick = function (e) {

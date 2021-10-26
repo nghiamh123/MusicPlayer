@@ -25,6 +25,17 @@
         <div class="cd-thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
         </div>
       </div>
+
+      <!-- progress -->
+      <div class="progress-area">
+        <div id="progress" class="progress"> 
+          <audio id="main-audio" src=""></audio>
+        </div>
+        <div class="song-timer">
+          <span class="current-time">0:00</span>
+          <span class="max-duration">0:00</span>
+        </div>
+      </div>
   
       <!-- Control -->
       <div class="control">
@@ -45,16 +56,15 @@
           <i class="fas fa-random"></i>
         </div>
       </div>
-  
-      <div class="progress-area">
-        <div id="progress" class="progress"> 
-          <audio id="main-audio" src=""></audio>
-        </div>
-        <div class="song-timer">
-          <span class="current-time">0:00</span>
-          <span class="max-duration">0:00</span>
-        </div>
+
+      <!-- volume control -->
+      <div class="volume">
+        <i class="fas fa-volume-off"></i>
+        <input type="range" id="volume_silder" max="100" min="0" step="1">
+        <i class="fas fa-volume-up"></i>
       </div>
+  
+      
       <audio id="audio" src=""></audio>
     </div>
   
